@@ -1,0 +1,3857 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "尚品甄选后台",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "tags": [
+    {
+      "name": "后台manager1"
+    },
+    {
+      "name": "后台manager1/sys-user-controller"
+    },
+    {
+      "name": "后台manager1/sys-role-controller"
+    },
+    {
+      "name": "后台manager1/sys-menu-controller"
+    },
+    {
+      "name": "后台manager1/product-spec-controller"
+    },
+    {
+      "name": "后台manager1/product-controller"
+    },
+    {
+      "name": "后台manager1/category-brand-controller"
+    },
+    {
+      "name": "后台manager1/brand-controller"
+    },
+    {
+      "name": "后台manager1/sys-user-role-controller"
+    },
+    {
+      "name": "后台manager1/sys-role-menu-controller"
+    },
+    {
+      "name": "后台manager1/index-controller"
+    },
+    {
+      "name": "后台manager1/file-upload-controller"
+    },
+    {
+      "name": "后台manager1/category-controller"
+    },
+    {
+      "name": "后台manager1/product-unit-controller"
+    },
+    {
+      "name": "后台manager1/order-info-controller"
+    }
+  ],
+  "paths": {
+    "/admin/system/test3": {
+      "get": {
+        "summary": "test测试3接口",
+        "x-apifox-folder": "后台manager1",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "",
+        "tags": [
+          "后台manager1"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "x-apifox-orders": [],
+                      "properties": {},
+                      "x-apifox-ignore-properties": []
+                    }
+                  },
+                  "x-apifox-orders": [
+                    "01HRDY5QNVS5VMB681RZNZBFC9"
+                  ],
+                  "x-apifox-refs": {
+                    "01HRDY5QNVS5VMB681RZNZBFC9": {
+                      "$ref": "#/components/schemas/Result"
+                    }
+                  },
+                  "x-apifox-ignore-properties": [
+                    "code",
+                    "message",
+                    "data"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153443405-run"
+      }
+    },
+    "/admin/system/sysUser/updateSysUser": {
+      "put": {
+        "summary": "/admin/system/sysUser/updateSysUser",
+        "x-apifox-folder": "后台manager1/sys-user-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "updateSysUser",
+        "tags": [
+          "后台manager1/sys-user-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SysUser"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448764-run"
+      }
+    },
+    "/admin/system/sysUser/saveSysUser": {
+      "post": {
+        "summary": "/admin/system/sysUser/saveSysUser",
+        "x-apifox-folder": "后台manager1/sys-user-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "saveSysUser",
+        "tags": [
+          "后台manager1/sys-user-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SysUser"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448765-run"
+      }
+    },
+    "/admin/system/sysUser/findByPage/{pageNum}/{pageSize}": {
+      "get": {
+        "summary": "/admin/system/sysUser/findByPage/{pageNum}/{pageSize}",
+        "x-apifox-folder": "后台manager1/sys-user-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "findByPage",
+        "tags": [
+          "后台manager1/sys-user-controller"
+        ],
+        "parameters": [
+          {
+            "name": "pageNum",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "createTimeBegin",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "createTimeEnd",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultPageInfoSysUser"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448766-run"
+      }
+    },
+    "/admin/system/sysRole/updateSysRole": {
+      "put": {
+        "summary": "/admin/system/sysRole/updateSysRole",
+        "x-apifox-folder": "后台manager1/sys-role-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "updateSysRole",
+        "tags": [
+          "后台manager1/sys-role-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SysRole"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448767-run"
+      }
+    },
+    "/admin/system/sysRole/saveSysRole": {
+      "post": {
+        "summary": "/admin/system/sysRole/saveSysRole",
+        "x-apifox-folder": "后台manager1/sys-role-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "saveSysRole",
+        "tags": [
+          "后台manager1/sys-role-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SysRole"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448768-run"
+      }
+    },
+    "/admin/system/sysRole/findByPage/{pageNum}/{pageSize}": {
+      "get": {
+        "summary": "/admin/system/sysRole/findByPage/{pageNum}/{pageSize}",
+        "x-apifox-folder": "后台manager1/sys-role-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "findByPage_1",
+        "tags": [
+          "后台manager1/sys-role-controller"
+        ],
+        "parameters": [
+          {
+            "name": "pageNum",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "roleName",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultPageInfoSysRole"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448769-run"
+      }
+    },
+    "/admin/system/sysRole/findAllRoles": {
+      "get": {
+        "summary": "/admin/system/sysRole/findAllRoles",
+        "x-apifox-folder": "后台manager1/sys-role-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "findAllRoles",
+        "tags": [
+          "后台manager1/sys-role-controller"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultMapStringObject"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448770-run"
+      }
+    },
+    "/admin/system/sysRole/deleteById/{id}": {
+      "delete": {
+        "summary": "/admin/system/sysRole/deleteById/{id}",
+        "x-apifox-folder": "后台manager1/sys-role-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "deleteById",
+        "tags": [
+          "后台manager1/sys-role-controller"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448771-run"
+      }
+    },
+    "/admin/system/sysMenu/updateSysMenuById": {
+      "put": {
+        "summary": "/admin/system/sysMenu/updateSysMenuById",
+        "x-apifox-folder": "后台manager1/sys-menu-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "updateSysMenuById",
+        "tags": [
+          "后台manager1/sys-menu-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SysMenu"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448772-run"
+      }
+    },
+    "/admin/system/sysMenu/saveSysMenuById": {
+      "post": {
+        "summary": "/admin/system/sysMenu/saveSysMenuById",
+        "x-apifox-folder": "后台manager1/sys-menu-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "saveSysMenuById",
+        "tags": [
+          "后台manager1/sys-menu-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SysMenu"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448773-run"
+      }
+    },
+    "/admin/system/sysMenu/findNodes": {
+      "get": {
+        "summary": "/admin/system/sysMenu/findNodes",
+        "x-apifox-folder": "后台manager1/sys-menu-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "findNodes",
+        "tags": [
+          "后台manager1/sys-menu-controller"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultListSysMenu"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448774-run"
+      }
+    },
+    "/admin/system/sysMenu/removeSysMenuById/{id}": {
+      "delete": {
+        "summary": "/admin/system/sysMenu/removeSysMenuById/{id}",
+        "x-apifox-folder": "后台manager1/sys-menu-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "removeSysMenuById",
+        "tags": [
+          "后台manager1/sys-menu-controller"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448775-run"
+      }
+    },
+    "/admin/product/productSpec/updateById": {
+      "put": {
+        "summary": "/admin/product/productSpec/updateById",
+        "x-apifox-folder": "后台manager1/product-spec-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "updateById",
+        "tags": [
+          "后台manager1/product-spec-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductSpec"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448776-run"
+      }
+    },
+    "/admin/product/productSpec/save": {
+      "post": {
+        "summary": "/admin/product/productSpec/save",
+        "x-apifox-folder": "后台manager1/product-spec-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "save",
+        "tags": [
+          "后台manager1/product-spec-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductSpec"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448777-run"
+      }
+    },
+    "/admin/product/productSpec/{page}/{limit}": {
+      "get": {
+        "summary": "/admin/product/productSpec/{page}/{limit}",
+        "x-apifox-folder": "后台manager1/product-spec-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "findByPage_2",
+        "tags": [
+          "后台manager1/product-spec-controller"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultPageInfoProductSpec"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448778-run"
+      }
+    },
+    "/admin/product/productSpec/findAll": {
+      "get": {
+        "summary": "/admin/product/productSpec/findAll",
+        "x-apifox-folder": "后台manager1/product-spec-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "findAll_1",
+        "tags": [
+          "后台manager1/product-spec-controller"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448779-run"
+      }
+    },
+    "/admin/product/product/updateStatus/{id}/{status}": {
+      "put": {
+        "summary": "/admin/product/product/updateStatus/{id}/{status}",
+        "x-apifox-folder": "后台manager1/product-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "updateStatus",
+        "tags": [
+          "后台manager1/product-controller"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "status",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448780-run"
+      }
+    },
+    "/admin/product/product/updateById": {
+      "put": {
+        "summary": "/admin/product/product/updateById",
+        "x-apifox-folder": "后台manager1/product-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "updateById_1",
+        "tags": [
+          "后台manager1/product-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448781-run"
+      }
+    },
+    "/admin/product/product/updateAuditStatus/{id}/{auditStatus}": {
+      "put": {
+        "summary": "/admin/product/product/updateAuditStatus/{id}/{auditStatus}",
+        "x-apifox-folder": "后台manager1/product-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "updateAuditStatus",
+        "tags": [
+          "后台manager1/product-controller"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "auditStatus",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448782-run"
+      }
+    },
+    "/admin/product/product/save": {
+      "post": {
+        "summary": "/admin/product/product/save",
+        "x-apifox-folder": "后台manager1/product-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "save_1",
+        "tags": [
+          "后台manager1/product-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448783-run"
+      }
+    },
+    "/admin/product/product/{page}/{limit}": {
+      "get": {
+        "summary": "/admin/product/product/{page}/{limit}",
+        "x-apifox-folder": "后台manager1/product-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "findByPage_3",
+        "tags": [
+          "后台manager1/product-controller"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "createTime",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updateTime",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isDeleted",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "brandId",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "category1Id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "category2Id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "category3Id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultPageInfoProduct"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448784-run"
+      }
+    },
+    "/admin/product/product/getById/{id}": {
+      "get": {
+        "summary": "/admin/product/product/getById/{id}",
+        "x-apifox-folder": "后台manager1/product-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "getById",
+        "tags": [
+          "后台manager1/product-controller"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultProduct"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448785-run"
+      }
+    },
+    "/admin/product/product/deleteById/{id}": {
+      "delete": {
+        "summary": "/admin/product/product/deleteById/{id}",
+        "x-apifox-folder": "后台manager1/product-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "deleteById_1",
+        "tags": [
+          "后台manager1/product-controller"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448786-run"
+      }
+    },
+    "/admin/product/categoryBrand/updateCategoryBrandById": {
+      "put": {
+        "summary": "/admin/product/categoryBrand/updateCategoryBrandById",
+        "x-apifox-folder": "后台manager1/category-brand-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "updateCategoryBrandById",
+        "tags": [
+          "后台manager1/category-brand-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryBrand"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448787-run"
+      }
+    },
+    "/admin/product/categoryBrand/saveCategoryBrand": {
+      "post": {
+        "summary": "/admin/product/categoryBrand/saveCategoryBrand",
+        "x-apifox-folder": "后台manager1/category-brand-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "saveCategoryBrand",
+        "tags": [
+          "后台manager1/category-brand-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryBrand"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448788-run"
+      }
+    },
+    "/admin/product/categoryBrand/getCategoryBrandPageList/{page}/{limit}": {
+      "get": {
+        "summary": "/admin/product/categoryBrand/getCategoryBrandPageList/{page}/{limit}",
+        "x-apifox-folder": "后台manager1/category-brand-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "getCategoryBrandPageList",
+        "tags": [
+          "后台manager1/category-brand-controller"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "brandId",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "categoryId",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultPageInfoCategoryBrand"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448789-run"
+      }
+    },
+    "/admin/product/categoryBrand/findBrandByCategoryId/{categoryId}": {
+      "get": {
+        "summary": "/admin/product/categoryBrand/findBrandByCategoryId/{categoryId}",
+        "x-apifox-folder": "后台manager1/category-brand-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "findBrandByCategoryId",
+        "tags": [
+          "后台manager1/category-brand-controller"
+        ],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448790-run"
+      }
+    },
+    "/admin/product/categoryBrand/deleteCategoryBrandById/{id}": {
+      "delete": {
+        "summary": "/admin/product/categoryBrand/deleteCategoryBrandById/{id}",
+        "x-apifox-folder": "后台manager1/category-brand-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "deleteCategoryBrandById",
+        "tags": [
+          "后台manager1/category-brand-controller"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448791-run"
+      }
+    },
+    "/admin/product/brand/updateBrandById": {
+      "put": {
+        "summary": "/admin/product/brand/updateBrandById",
+        "x-apifox-folder": "后台manager1/brand-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "updateBrandById",
+        "tags": [
+          "后台manager1/brand-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Brand"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448792-run"
+      }
+    },
+    "/admin/product/brand/saveBrand": {
+      "post": {
+        "summary": "/admin/product/brand/saveBrand",
+        "x-apifox-folder": "后台manager1/brand-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "saveBrand",
+        "tags": [
+          "后台manager1/brand-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Brand"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448793-run"
+      }
+    },
+    "/admin/product/brand/findByPage/{page}/{limit}": {
+      "get": {
+        "summary": "/admin/product/brand/findByPage/{page}/{limit}",
+        "x-apifox-folder": "后台manager1/brand-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "findByPage_4",
+        "tags": [
+          "后台manager1/brand-controller"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultPageInfoBrand"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448794-run"
+      }
+    },
+    "/admin/product/brand/findAllBrand": {
+      "get": {
+        "summary": "/admin/product/brand/findAllBrand",
+        "x-apifox-folder": "后台manager1/brand-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "findAllBrand",
+        "tags": [
+          "后台manager1/brand-controller"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultListBrand"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448795-run"
+      }
+    },
+    "/admin/system/sysUserRole/doAssign": {
+      "post": {
+        "summary": "/admin/system/sysUserRole/doAssign",
+        "x-apifox-folder": "后台manager1/sys-user-role-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "doAssign",
+        "tags": [
+          "后台manager1/sys-user-role-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssginRoleDto"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448796-run"
+      }
+    },
+    "/admin/system/sysUserRole/getUserRoleIdList/{userId}": {
+      "get": {
+        "summary": "/admin/system/sysUserRole/getUserRoleIdList/{userId}",
+        "x-apifox-folder": "后台manager1/sys-user-role-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "getUserRoleIdList",
+        "tags": [
+          "后台manager1/sys-user-role-controller"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultListLong"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448797-run"
+      }
+    },
+    "/admin/system/sysRoleMenu/doAssignMenuIdToSysRole": {
+      "post": {
+        "summary": "/admin/system/sysRoleMenu/doAssignMenuIdToSysRole",
+        "x-apifox-folder": "后台manager1/sys-role-menu-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "doAssignMenuIdToSysRole",
+        "tags": [
+          "后台manager1/sys-role-menu-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssginMenuDto"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448798-run"
+      }
+    },
+    "/admin/system/sysRoleMenu/getSysRoleMenuIds/{id}": {
+      "get": {
+        "summary": "/admin/system/sysRoleMenu/getSysRoleMenuIds/{id}",
+        "x-apifox-folder": "后台manager1/sys-role-menu-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "getSysRoleMenuIds",
+        "tags": [
+          "后台manager1/sys-role-menu-controller"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultMapStringObject"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448799-run"
+      }
+    },
+    "/admin/system/index/login": {
+      "post": {
+        "summary": "/admin/system/index/login",
+        "x-apifox-folder": "后台manager1/index-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "login",
+        "tags": [
+          "后台manager1/index-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultLoginVo"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448800-run"
+      }
+    },
+    "/admin/system/index/menus": {
+      "get": {
+        "summary": "/admin/system/index/menus",
+        "x-apifox-folder": "后台manager1/index-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "menus",
+        "tags": [
+          "后台manager1/index-controller"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448801-run"
+      }
+    },
+    "/admin/system/index/getUserInfo": {
+      "get": {
+        "summary": "/admin/system/index/getUserInfo",
+        "x-apifox-folder": "后台manager1/index-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "getUserInfo",
+        "tags": [
+          "后台manager1/index-controller"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultSysUser"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448802-run"
+      }
+    },
+    "/admin/system/index/generateValidateCode": {
+      "get": {
+        "summary": "/admin/system/index/generateValidateCode",
+        "x-apifox-folder": "后台manager1/index-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "generateValidateCode",
+        "tags": [
+          "后台manager1/index-controller"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultValidateCodeVo"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448803-run"
+      }
+    },
+    "/admin/system/fileUpload": {
+      "post": {
+        "summary": "/admin/system/fileUpload",
+        "x-apifox-folder": "后台manager1/file-upload-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "fileUpload",
+        "tags": [
+          "后台manager1/file-upload-controller"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "required": [
+                  "file"
+                ],
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "x-apifox-orders": [
+                  "file"
+                ],
+                "x-apifox-ignore-properties": []
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultString"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448804-run"
+      }
+    },
+    "/admin/product/category/importData": {
+      "post": {
+        "summary": "/admin/product/category/importData",
+        "x-apifox-folder": "后台manager1/category-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "importData",
+        "tags": [
+          "后台manager1/category-controller"
+        ],
+        "parameters": [
+          {
+            "name": "file",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448805-run"
+      }
+    },
+    "/admin/product/category/findCategoryByParentId/{parentId}": {
+      "get": {
+        "summary": "/admin/product/category/findCategoryByParentId/{parentId}",
+        "x-apifox-folder": "后台manager1/category-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "findCategoryByParentId",
+        "tags": [
+          "后台manager1/category-controller"
+        ],
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultListCategory"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448806-run"
+      }
+    },
+    "/admin/product/category/exportData": {
+      "get": {
+        "summary": "/admin/product/category/exportData",
+        "x-apifox-folder": "后台manager1/category-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "exportData",
+        "tags": [
+          "后台manager1/category-controller"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448807-run"
+      }
+    },
+    "/admin/product/productUnit/findAll": {
+      "get": {
+        "summary": "/admin/product/productUnit/findAll",
+        "x-apifox-folder": "后台manager1/product-unit-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "findAll",
+        "tags": [
+          "后台manager1/product-unit-controller"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultListProductUnit"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448808-run"
+      }
+    },
+    "/admin/order/orderInfo/getOrderStatisticsData": {
+      "get": {
+        "summary": "/admin/order/orderInfo/getOrderStatisticsData",
+        "x-apifox-folder": "后台manager1/order-info-controller",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "getOrderStatisticsData",
+        "tags": [
+          "后台manager1/order-info-controller"
+        ],
+        "parameters": [
+          {
+            "name": "createTimeBegin",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "createTimeEnd",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultOrderStatisticsVo"
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/4125029/apis/api-153448809-run"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ResultOrderStatisticsVo": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/OrderStatisticsVo"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "OrderStatisticsVo": {
+        "type": "object",
+        "properties": {
+          "dateList": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "amountList": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "x-apifox-orders": [
+          "dateList",
+          "amountList"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "OrderStatisticsDto": {
+        "type": "object",
+        "properties": {
+          "createTimeBegin": {
+            "type": "string",
+            "format": "string"
+          },
+          "createTimeEnd": {
+            "type": "string",
+            "format": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "createTimeBegin",
+          "createTimeEnd"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultListBrand": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Brand"
+            }
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultPageInfoBrand": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageInfoBrand"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "PageInfoBrand": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "list": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Brand"
+            }
+          },
+          "pageNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startRow": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "endRow": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prePage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nextPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isFirstPage": {
+            "type": "boolean"
+          },
+          "isLastPage": {
+            "type": "boolean"
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          },
+          "navigatePages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navigatepageNums": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "navigateFirstPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navigateLastPage": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-apifox-orders": [
+          "total",
+          "list",
+          "pageNum",
+          "pageSize",
+          "size",
+          "startRow",
+          "endRow",
+          "pages",
+          "prePage",
+          "nextPage",
+          "isFirstPage",
+          "isLastPage",
+          "hasPreviousPage",
+          "hasNextPage",
+          "navigatePages",
+          "navigatepageNums",
+          "navigateFirstPage",
+          "navigateLastPage"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultListCategory": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Category"
+            }
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "Category": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "imageUrl": {
+            "type": "string"
+          },
+          "parentId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasChildren": {
+            "type": "boolean"
+          }
+        },
+        "x-apifox-orders": [
+          "id",
+          "createTime",
+          "updateTime",
+          "isDeleted",
+          "name",
+          "imageUrl",
+          "parentId",
+          "status",
+          "orderNum",
+          "hasChildren"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultPageInfoCategoryBrand": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageInfoCategoryBrand"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "PageInfoCategoryBrand": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "list": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CategoryBrand"
+            }
+          },
+          "pageNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startRow": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "endRow": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prePage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nextPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isFirstPage": {
+            "type": "boolean"
+          },
+          "isLastPage": {
+            "type": "boolean"
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          },
+          "navigatePages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navigatepageNums": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "navigateFirstPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navigateLastPage": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-apifox-orders": [
+          "total",
+          "list",
+          "pageNum",
+          "pageSize",
+          "size",
+          "startRow",
+          "endRow",
+          "pages",
+          "prePage",
+          "nextPage",
+          "isFirstPage",
+          "isLastPage",
+          "hasPreviousPage",
+          "hasNextPage",
+          "navigatePages",
+          "navigatepageNums",
+          "navigateFirstPage",
+          "navigateLastPage"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "CategoryBrandDto": {
+        "type": "object",
+        "properties": {
+          "brandId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-apifox-orders": [
+          "brandId",
+          "categoryId"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultProduct": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Product"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultPageInfoProduct": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageInfoProduct"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "PageInfoProduct": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "list": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Product"
+            }
+          },
+          "pageNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startRow": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "endRow": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prePage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nextPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isFirstPage": {
+            "type": "boolean"
+          },
+          "isLastPage": {
+            "type": "boolean"
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          },
+          "navigatePages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navigatepageNums": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "navigateFirstPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navigateLastPage": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-apifox-orders": [
+          "total",
+          "list",
+          "pageNum",
+          "pageSize",
+          "size",
+          "startRow",
+          "endRow",
+          "pages",
+          "prePage",
+          "nextPage",
+          "isFirstPage",
+          "isLastPage",
+          "hasPreviousPage",
+          "hasNextPage",
+          "navigatePages",
+          "navigatepageNums",
+          "navigateFirstPage",
+          "navigateLastPage"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ProductDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "brandId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "category1Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "category2Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "category3Id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-apifox-orders": [
+          "id",
+          "createTime",
+          "updateTime",
+          "isDeleted",
+          "brandId",
+          "category1Id",
+          "category2Id",
+          "category3Id"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultPageInfoProductSpec": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageInfoProductSpec"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "PageInfoProductSpec": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "list": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductSpec"
+            }
+          },
+          "pageNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startRow": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "endRow": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prePage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nextPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isFirstPage": {
+            "type": "boolean"
+          },
+          "isLastPage": {
+            "type": "boolean"
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          },
+          "navigatePages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navigatepageNums": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "navigateFirstPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navigateLastPage": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-apifox-orders": [
+          "total",
+          "list",
+          "pageNum",
+          "pageSize",
+          "size",
+          "startRow",
+          "endRow",
+          "pages",
+          "prePage",
+          "nextPage",
+          "isFirstPage",
+          "isLastPage",
+          "hasPreviousPage",
+          "hasNextPage",
+          "navigatePages",
+          "navigatepageNums",
+          "navigateFirstPage",
+          "navigateLastPage"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultListProductUnit": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductUnit"
+            }
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ProductUnit": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "id",
+          "name"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ValidateCodeVo": {
+        "type": "object",
+        "properties": {
+          "codeKey": {
+            "type": "string"
+          },
+          "codeValue": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "codeKey",
+          "codeValue"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultValidateCodeVo": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/ValidateCodeVo"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultSysUser": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SysUser"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultListSysMenu": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SysMenu"
+            }
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultPageInfoSysRole": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageInfoSysRole"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "PageInfoSysRole": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "list": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SysRole"
+            }
+          },
+          "pageNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startRow": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "endRow": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prePage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nextPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isFirstPage": {
+            "type": "boolean"
+          },
+          "isLastPage": {
+            "type": "boolean"
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          },
+          "navigatePages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navigatepageNums": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "navigateFirstPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navigateLastPage": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-apifox-orders": [
+          "total",
+          "list",
+          "pageNum",
+          "pageSize",
+          "size",
+          "startRow",
+          "endRow",
+          "pages",
+          "prePage",
+          "nextPage",
+          "isFirstPage",
+          "isLastPage",
+          "hasPreviousPage",
+          "hasNextPage",
+          "navigatePages",
+          "navigatepageNums",
+          "navigateFirstPage",
+          "navigateLastPage"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "SysRoleDto": {
+        "type": "object",
+        "properties": {
+          "roleName": {
+            "type": "string",
+            "format": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "roleName"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultMapStringObject": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "x-apifox-orders": []
+            },
+            "x-apifox-orders": [],
+            "properties": {},
+            "x-apifox-ignore-properties": []
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultPageInfoSysUser": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageInfoSysUser"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "PageInfoSysUser": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "list": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SysUser"
+            }
+          },
+          "pageNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startRow": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "endRow": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prePage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nextPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isFirstPage": {
+            "type": "boolean"
+          },
+          "isLastPage": {
+            "type": "boolean"
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          },
+          "navigatePages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navigatepageNums": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "navigateFirstPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "navigateLastPage": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-apifox-orders": [
+          "total",
+          "list",
+          "pageNum",
+          "pageSize",
+          "size",
+          "startRow",
+          "endRow",
+          "pages",
+          "prePage",
+          "nextPage",
+          "isFirstPage",
+          "isLastPage",
+          "hasPreviousPage",
+          "hasNextPage",
+          "navigatePages",
+          "navigatepageNums",
+          "navigateFirstPage",
+          "navigateLastPage"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "SysUserDto": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "format": "string"
+          },
+          "createTimeBegin": {
+            "type": "string",
+            "format": "string"
+          },
+          "createTimeEnd": {
+            "type": "string",
+            "format": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "keyword",
+          "createTimeBegin",
+          "createTimeEnd"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultListLong": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultString": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ResultLoginVo": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/LoginVo"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "LoginVo": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          },
+          "refresh_token": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "token",
+          "refresh_token"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "captcha": {
+            "type": "string"
+          },
+          "codeKey": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "userName",
+          "password",
+          "captcha",
+          "codeKey"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "AssginMenuDto": {
+        "type": "object",
+        "properties": {
+          "roleId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "menuIdList": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              },
+              "x-apifox-orders": [],
+              "properties": {},
+              "x-apifox-ignore-properties": []
+            }
+          }
+        },
+        "x-apifox-orders": [
+          "roleId",
+          "menuIdList"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "AssginRoleDto": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "roleIdList": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        },
+        "x-apifox-orders": [
+          "userId",
+          "roleIdList"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "Brand": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "id",
+          "createTime",
+          "updateTime",
+          "isDeleted",
+          "name",
+          "logo"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "CategoryBrand": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "brandId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "categoryName": {
+            "type": "string"
+          },
+          "brandName": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "id",
+          "createTime",
+          "updateTime",
+          "isDeleted",
+          "brandId",
+          "categoryId",
+          "categoryName",
+          "brandName",
+          "logo"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ProductSku": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skuCode": {
+            "type": "string"
+          },
+          "skuName": {
+            "type": "string"
+          },
+          "productId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "thumbImg": {
+            "type": "string"
+          },
+          "salePrice": {
+            "type": "number"
+          },
+          "marketPrice": {
+            "type": "number"
+          },
+          "costPrice": {
+            "type": "number"
+          },
+          "stockNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "saleNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skuSpec": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "string"
+          },
+          "volume": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-apifox-orders": [
+          "id",
+          "createTime",
+          "updateTime",
+          "isDeleted",
+          "skuCode",
+          "skuName",
+          "productId",
+          "thumbImg",
+          "salePrice",
+          "marketPrice",
+          "costPrice",
+          "stockNum",
+          "saleNum",
+          "skuSpec",
+          "weight",
+          "volume",
+          "status"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "Product": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "brandId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "category1Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "category2Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "category3Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "unitName": {
+            "type": "string"
+          },
+          "sliderUrls": {
+            "type": "string"
+          },
+          "specValue": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "auditStatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "auditMessage": {
+            "type": "string"
+          },
+          "brandName": {
+            "type": "string"
+          },
+          "category1Name": {
+            "type": "string"
+          },
+          "category2Name": {
+            "type": "string"
+          },
+          "category3Name": {
+            "type": "string"
+          },
+          "productSkuList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductSku"
+            }
+          },
+          "detailsImageUrls": {
+            "type": "string"
+          }
+        },
+        "description": "请求参数实体类",
+        "x-apifox-orders": [
+          "id",
+          "createTime",
+          "updateTime",
+          "isDeleted",
+          "name",
+          "brandId",
+          "category1Id",
+          "category2Id",
+          "category3Id",
+          "unitName",
+          "sliderUrls",
+          "specValue",
+          "status",
+          "auditStatus",
+          "auditMessage",
+          "brandName",
+          "category1Name",
+          "category2Name",
+          "category3Name",
+          "productSkuList",
+          "detailsImageUrls"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ProductSpec": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "specName": {
+            "type": "string"
+          },
+          "specValue": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "id",
+          "createTime",
+          "updateTime",
+          "isDeleted",
+          "specName",
+          "specValue"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "SysMenu": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "parentId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "component": {
+            "type": "string"
+          },
+          "sortValue": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SysMenu"
+            }
+          }
+        },
+        "x-apifox-orders": [
+          "id",
+          "createTime",
+          "updateTime",
+          "isDeleted",
+          "parentId",
+          "title",
+          "component",
+          "sortValue",
+          "status",
+          "children"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "SysRole": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "roleName": {
+            "type": "string",
+            "description": "角色名称"
+          },
+          "roleCode": {
+            "type": "string",
+            "description": "角色编码"
+          },
+          "description": {
+            "type": "string",
+            "description": "描述"
+          }
+        },
+        "description": "SysRole",
+        "x-apifox-orders": [
+          "id",
+          "createTime",
+          "updateTime",
+          "isDeleted",
+          "roleName",
+          "roleCode",
+          "description"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "SysUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "avatar": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-apifox-orders": [
+          "id",
+          "createTime",
+          "updateTime",
+          "isDeleted",
+          "userName",
+          "password",
+          "name",
+          "phone",
+          "avatar",
+          "description",
+          "status"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "Result": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object",
+            "x-apifox-orders": [],
+            "properties": {},
+            "x-apifox-ignore-properties": []
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "message",
+          "data"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      }
+    }
+  },
+  "servers": []
+}
